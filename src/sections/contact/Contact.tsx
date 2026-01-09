@@ -54,12 +54,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 md:py-16 lg:py-24 bg-white overflow-hidden">
+      {/* Agregado: overflow-hidden al section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Agregado: overflow-hidden al contenedor */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }} // Cambiado: de 30 a 20
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }} // Agregado: margen negativo
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12 lg:mb-16 px-2"
         >
@@ -72,12 +74,14 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 overflow-hidden">
+          {/* Agregado: overflow-hidden al grid */}
+          
           {/* Columna izquierda - Información de contacto */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }} // Cambiado: de x: -30 a y: 30
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }} // Agregado: margen negativo
             transition={{ duration: 0.6 }}
             className="w-full"
           >
@@ -91,16 +95,18 @@ const Contact = () => {
                 drive excellence together.
               </p>
 
-              <div className="space-y-4 md:space-y-6">
+              <div className="space-y-4 md:space-y-6 overflow-hidden">
+                {/* Agregado: overflow-hidden */}
                 {contactInfo.map((item, index) => (
                   <motion.a
                     key={item.title}
                     href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-20px" }} // Agregado: margen negativo
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-start gap-3 sm:gap-4 hover:text-black text-white group hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-lg md:rounded-xl transition-all duration-300"
+                    className="flex items-start gap-3 sm:gap-4 hover:text-black text-white group hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-lg md:rounded-xl transition-all duration-300 overflow-hidden"
+                    style={{ willChange: 'transform' }} // Agregado: optimización
                   >
                     <div className="flex-shrink-0 p-2 sm:p-3 bg-[#FF6F00] rounded-lg md:rounded-lg group-hover:scale-110 transition-transform duration-300">
                       <item.icon
@@ -136,14 +142,16 @@ const Contact = () => {
 
           {/* Columna derecha - Formulario */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }} // Cambiado: de x: 30 a y: 30
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }} // Agregado: margen negativo
             transition={{ duration: 0.6 }}
             className="w-full"
           >
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-              <div>
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 overflow-hidden">
+              {/* Agregado: overflow-hidden */}
+              <div className="overflow-hidden">
+                {/* Agregado: overflow-hidden a cada input group */}
                 <label
                   htmlFor="name"
                   className="block text-sm font-semibold text-[#1A237E] mb-2"
@@ -162,7 +170,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="overflow-hidden">
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold text-[#1A237E] mb-2"
@@ -181,7 +189,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="overflow-hidden">
                 <label
                   htmlFor="company"
                   className="block text-sm font-semibold text-[#1A237E] mb-2"
@@ -199,7 +207,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="overflow-hidden">
                 <label
                   htmlFor="phone"
                   className="block text-sm font-semibold text-[#1A237E] mb-2"
@@ -217,7 +225,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="overflow-hidden">
                 <label
                   htmlFor="message"
                   className="block text-sm font-semibold text-[#1A237E] mb-2"
@@ -238,10 +246,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#FF6F00] hover:bg-[#E65100] text-white py-3 sm:py-4 md:py-6 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                className="w-full bg-[#FF6F00] hover:bg-[#E65100] text-white py-3 sm:py-4 md:py-6 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group overflow-hidden"
               >
-                Send Message
-                <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10">Send Message</span>
+                <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform relative z-10" />
               </button>
             </form>
           </motion.div>

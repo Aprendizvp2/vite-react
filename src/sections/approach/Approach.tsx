@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Search, Clipboard, Rocket, BarChart } from 'lucide-react';
 
@@ -35,12 +34,13 @@ const Approach = () => {
   ];
 
   return (
-    <section id="approach" className="py-24 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="approach" className="py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      {/* Agregar overflow-hidden al contenedor principal */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -60,16 +60,16 @@ const Approach = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }} /* Agregar margen negativo */
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`flex flex-col lg:flex-row items-center gap-8 ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 }`}
               >
-                <div className="flex-1">
-                  <div className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                <div className="flex-1 w-full">
+                  <div className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 w-full ${
                     index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'
                   }`}>
                     <div className={`flex items-center gap-4 mb-4 ${
@@ -108,19 +108,19 @@ const Approach = () => {
                   </div>
                 </div>
 
-                <div className="hidden lg:block w-16 h-16 rounded-full bg-white shadow-lg border-4 border-[#FF6F00] flex-shrink-0"></div>
+                <div className="hidden lg:block w-16 h-16 rounded-full bg-white shadow-lg border-4 border-[#FF6F00] flex-shrink-0 z-10"></div>
 
-                <div className="flex-1"></div>
+                <div className="flex-1 lg:block hidden"></div>
               </motion.div>
             ))}
           </div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center gap-2 bg-[#fcece4] bg-opacity-10 text-[#FF6F00] px-6 py-3 rounded-full border border-[#FF6F00] border-opacity-30">
