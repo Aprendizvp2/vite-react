@@ -24,7 +24,6 @@ function HomePage() {
       <Approach />
       <BrainLean />
       <CallToAction />
-      <Contact />
     </>
   );
 }
