@@ -1,0 +1,29 @@
+{
+  "HOME": "Inicio",
+  "SERVICES": "Servicios",
+  "CONTACT": "Contacto",
+  "LANGUAGE": "Idioma",
+  "SPANISH": "Español",
+  "ENGLISH": "Inglés",
+  "PORTUGUESE": "Portugués",
+  "LEARN_MORE": "Conocer más",
+  "GET_STARTED": "Comenzar",
+
+  "TITLE_ONE": "Manufactura",
+  "SUBTITLE_ONE": "Excelencia Operacional",
+  "DESCRIPTION_ONE": "No transformamos procesos. Transformamos mentalidades que transforman procesos.",
+  "INTRO_ONE": "Desbloquea transformación sostenible a través de claridad estratégica, excelencia operacional y preparación cognitiva. Guiamos a los fabricantes hacia el rendimiento máximo.",
+  "BUTTON_TEXT_ONE": "Conocer más",
+
+  "TITLE_TWO": "Neurociencia Encuentra",
+  "SUBTITLE_TWO": "Manufactura",
+  "DESCRIPTION_TWO": "El cambio duradero comienza comprendiendo cómo funciona el cerebro.",
+  "INTRO_TWO": "Descubre la primera metodología estructurada basada en palancas cognitivas y operacionales para la transformación industrial sostenible.",
+  "BUTTON_TEXT_TWO": "Ver Metodología",
+
+  "TITLE_THREE": "Empoderando",
+  "SUBTITLE_THREE": "Líderes Globales",
+  "DESCRIPTION_THREE": "La excelencia no es un acto aislado, sino un hábito neurológicamente consolidado.",
+  "INTRO_THREE": "Con más de 20 años de experiencia internacional, entrenamos cognitivamente a los líderes del mañana para gestionar la complejidad con confianza y claridad.",
+  "BUTTON_TEXT_THREE": "Conoce a Nuestro Equipo →"
+}

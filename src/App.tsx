@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import CallToAction from "./components/call-to-action/CallToAction";
+import FloatingButtons from "./components/floating-button/FloatingButton";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Approach from "./sections/approach/Approach";
+import BrainLean from "./sections/brain-lean/BrainLean";
+import Hero from "./sections/hero/Hero";
+import Services from "./sections/services/Services";
+import Transformation from "./sections/trasnformation/Transformation";
+import Contact from "./sections/contact/Contact";
+import Mission from "./sections/mission/Mission";
+import Manufacturing from "./pages/Manufacturing/Manufacturing";
+import Team from "./pages/Team/Team";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function HomePage() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Hero />
+      <Mission />
+      <Transformation />
+      <Services />
+      <Approach />
+      <BrainLean />
+      <CallToAction />
+      <Contact />
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <div className="min-h-screen">
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/team" element={<Team />} />
+        </Routes>
+      </main>
+
+      <Footer />
+      <FloatingButtons />
+    </div>
+  );
+}
+
+export default App;

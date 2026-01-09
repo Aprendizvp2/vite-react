@@ -1,0 +1,29 @@
+{
+  "HOME": "Home",
+  "SERVICES": "Services",
+  "CONTACT": "Contact",
+  "LANGUAGE": "Language",
+  "SPANISH": "Spanish",
+  "ENGLISH": "English",
+  "PORTUGUESE": "Portuguese",
+  "LEARN_MORE": "Learn More",
+  "GET_STARTED": "Get Started",
+
+  "TITLE_ONE": "Manufacturing",
+  "SUBTITLE_ONE": "Operational Excellence",
+  "DESCRIPTION_ONE": "We don't transform processes. We transform mindsets that transform processes.",
+  "INTRO_ONE": "Unlock sustainable transformation through strategic clarity, operational excellence, and cognitive preparation. We guide manufacturers to peak performance.",
+  "BUTTON_TEXT_ONE": "Learn More",
+
+  "TITLE_TWO": "Neuroscience Meets",
+  "SUBTITLE_TWO": "Manufacturing",
+  "DESCRIPTION_TWO": "Lasting change begins with understanding how the brain works.",
+  "INTRO_TWO": "Discover the first structured methodology based on cognitive and operational levers for sustainable industrial transformation.",
+  "BUTTON_TEXT_TWO": "View Methodology",
+
+  "TITLE_THREE": "Empowering",
+  "SUBTITLE_THREE": "Global Leaders",
+  "DESCRIPTION_THREE": "Excellence is not an isolated act, but a neurologically consolidated habit.",
+  "INTRO_THREE": "With over 20 years of international experience, we cognitively train tomorrow's leaders to manage complexity with confidence and clarity.",
+  "BUTTON_TEXT_THREE": "Meet Our Team →"
+}
